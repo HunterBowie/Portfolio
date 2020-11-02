@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Hunter's Portfolio</title>
+	</head>
+	<body background="bg.png">
+		<style type="text/css">
+			div {
+				position: absolute;
+				padding: 20px;
+				border: 5px solid black;
+				background-color: #5d84a2;
+				left: 50%;
+			}
+			img {
+				border: 5px solid black;
+			}
+			button {
+				background-color: #E52525;
+				border: 5px solid black;
+			}
+			p {
+				font-size: 30px;
+			}
+		</style>
+
+		<div id="title" style="width: 600px; height: 50px;margin-left: -300px;">
+			<marquee style="font-size: 40pt;"scrollamount="20"direction="left" behavior="alternate">Hunter's Portfolio</b></marquee>
+		</div>
+		<div id="text" style="width: 600px; height: 100px;margin-left: -300px; top: 200px;">
+			<head><font size="+3">I thought the website was kinda boring so i added some javascript, enjoy. (click buttons)</font>     also <a href="lounge/lounge.html">lounge</a> and <a href="https://www.google.com/maps/place/La+Casa+Gelato/@49.2770652,-123.0838258,17z/data=!3m1!4b1!4m5!3m4!1s0x5486716b0ebd5c7d:0x25948eb869ab17d4!8m2!3d49.2770652!4d-123.0816371">ice cream</a></head>
+		</div>
+
+		<img src="kingposter.png" style="position: absolute;width: 300px;height: 500px;top: 525px;left: 50%; margin-left: -350px;">
+		<div id="box1" style="width: 400px; height: 500px;top: 500px;">
+			
+			<head><font size="+3">King Kong Poster</font></head>
+			<p>Marks: 9/10</p>
+			<p>Date: October 9th</p>
+			<p>Inspiration: </p>
+			<img src="KING KONGv2.png" style="width: 150px; height: 200px">
+		</div>
+
+		<img src="Valintines day card.png" style="position: absolute;width: 300px;height: 500px;top: 1125px;left: 50%; margin-left: -350px;">
+		<div id="box2" style="width: 400px; height: 500px;top: 1100px;">
+			
+			<head><font size="+3">Valintines day card</font></head>
+			<p>Marks: 9.55/10</p>
+			<p>Date: October 20th</p>
+			<p>Inspiration: Blood</p>
+		</div>
+
+		<img src="Black lives matter Hunter.png" style="position: absolute;width: 400px;height: 500px;top: 1725px;left: 50%; margin-left: -450px;">
+		<div id="box3" style="width: 400px; height: 500px;top: 1700px;">
+			
+			<head><font size="+3">Black Lives Matter Poster</font></head>
+			<p>Marks: ?</p>
+			<p>Date: October 9th</p>
+			<p>Inspiration: Lots of posters</p>
+		</div>
+
+		<img src="4corn.png" style="position: absolute;width: 600px;height: 500px;top: 2325px;left: 50%; margin-left: -650px;">
+		<div id="box4" style="width: 400px; height: 500px;top: 2300px;">
+			
+			<head><font size="+3">4 Corners</font></head>
+			<p>Marks: ?</p>
+			<p>Date: October 21th</p>
+			<p>Inspiration: Pokemon</p>
+		</div>
+
+		<button id="bg" onclick="change_background()" style="position: absolute;height: 100px;width: 150px; top: 375px; left: 50%; margin-left: -350px;"><font size="+2">Change background</font></button>
+
+		<button id="theme" onclick="change_theme()" style="position: absolute;height: 100px;width: 150px; top: 375px; left: 50%; margin-left: -150px;"><font size="+2">Change theme</font></button>
+
+		<button id="colour" onclick="change_box()" style="position: absolute;height: 100px;width: 150px; top: 375px; left: 60%;px;margin-left: -120px"><font size="+2">Change box</font></button>
+
+		<script type="text/javascript">
+			var bg1 = "url('bg.png')"
+			var bg2 = "url('bg2.jpg')"
+			var bg3 = "url('bg3.jpg')"
+			var bg4 = "url('bg4.png')"
+			var bg5 = "url('bg5.png')"
+			var bg6 = "url('bg6.jpg')"
+			var bg7 = "url('bg7.png')"
+			var bg8 = "url('bg8.jpg')"
+			var title = document.getElementById('title')
+			var text = document.getElementById('text')
+			var box1 = document.getElementById('box1')
+			var box2 = document.getElementById('box2')
+			var box3 = document.getElementById('box3')
+			var box4 = document.getElementById('box4')
+			var button = document.getElementById('bg')
+			var button2 = document.getElementById('theme')
+			var button3 = document.getElementById('colour')
+
+			var colours = ["green", "blue", "white", "yellow", "red", "purple"]
+
+			var all_bg = [bg1, bg2, bg3, bg4, bg5, bg6, bg7, bg8]
+
+			function change_background(bg=all_bg[Math.floor(Math.random() * all_bg.length)]) {
+				document.body.style.backgroundImage = bg
+			}
+			function change_box(colour=colours[Math.floor(Math.random() * colours.length)]) {
+				title.style.backgroundColor = colour
+				text.style.backgroundColor = colour
+				box3.style.backgroundColor = colour
+				box4.style.backgroundColor = colour
+				box2.style.backgroundColor = colour
+				box1.style.backgroundColor = colour
+				button.style.backgroundColor = colour
+				button2.style.backgroundColor = colour
+				button3.style.backgroundColor = colour
+
+			}
+
+			function change_theme() {
+				// change background and box colour
+				var random = Math.floor(Math.random() * colours.length)
+				var choice_colours = colours[random]
+				var choice_background = all_bg[random]
+				change_box(choice_colours)
+				change_background(choice_background)
+			}
+			
+		</script>
+
+	</body>
+</html>
