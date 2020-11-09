@@ -27,6 +27,9 @@
 		<div id="title" style="width: 600px; height: 50px;margin-left: -300px;">
 			<marquee style="font-size: 40pt;"scrollamount="20"direction="left" behavior="alternate">Hunter's Portfolio</b></marquee>
 		</div>
+		<div id="text" style="width: 600px; height: 100px;margin-left: -300px; top: 200px;">
+			<head><font size="+3">Some extra stuff (click buttons)</font>     also <a href="lounge/lounge.html">lounge</a> and <a href="https://www.google.com/maps/place/La+Casa+Gelato/@49.2770652,-123.0838258,17z/data=!3m1!4b1!4m5!3m4!1s0x5486716b0ebd5c7d:0x25948eb869ab17d4!8m2!3d49.2770652!4d-123.0816371">ice cream</a></head>
+		</div>
 		<img src="kingposter.png" style="position: absolute;width: 300px;height: 500px;top: 525px;left: 50%; margin-left: -350px;">
 		<div id="box1" style="width: 400px; height: 500px;top: 500px;">
 			
@@ -82,6 +85,7 @@
 			var bg7 = "url('bg7.png')"
 			var bg8 = "url('bg8.jpg')"
 			var title = document.getElementById('title')
+			var text = document.getElementById('text')
 			var box1 = document.getElementById('box1')
 			var box2 = document.getElementById('box2')
 			var box3 = document.getElementById('box3')
@@ -99,6 +103,7 @@
 			}
 			function change_box(colour=colours[Math.floor(Math.random() * colours.length)]) {
 				title.style.backgroundColor = colour
+				text.style.backgroundColor = colour
 				box3.style.backgroundColor = colour
 				box4.style.backgroundColor = colour
 				box2.style.backgroundColor = colour
